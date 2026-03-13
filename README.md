@@ -8,7 +8,7 @@ Este es un **monorepoNX** diseñado para centralizar múltiples proyectos web en
 
 ## Proyectos
 
-### UIGen
+### UIGen - Curso Claude 101 (Anthropics)
 
 UIGen es una aplicación web de generación de componentes React asistida por inteligencia artificial. Permite a los usuarios crear interfaces de usuario mediante descripciones en lenguaje natural, las cuales son procesadas por modelos de IA para generar código React funcional en tiempo real. La plataforma incluye un editor de código avanzado con resaltado de sintaxis, un sistema de vista previa en vivo, persistencia de proyectos para usuarios registrados, y soporte para exportación de código generado. Está construida con Next.js 15, React 19, TypeScript, Tailwind CSS v4, Prisma con SQLite y el SDK de Vercel AI para la integración con Anthropic Claude.
 
