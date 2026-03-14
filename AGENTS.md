@@ -100,11 +100,13 @@ Tipos: feat, fix, docs, style, refactor, test, chore
 
 | Archivo | Descripción |
 |---------|-------------|
-| `prisma/schema.prisma` | Modelo de datos |
+| `prisma/schema.prisma` | Modelo de datos (User, Project) |
 | `src/lib/provider.ts` | Configuración AI provider |
 | `src/app/api/chat/route.ts` | Endpoint principal del chat |
 | `src/lib/file-system.ts` | Sistema de archivos virtual |
 | `src/lib/tools/*.ts` | Herramientas AI |
+
+> **Nota**: El schema de la base de datos está definido en `apps/uigen/prisma/schema.prisma`. Referencialo cada vez que necesites entender la estructura de la data almacenada.
 
 ## Configuración de Entorno
 
