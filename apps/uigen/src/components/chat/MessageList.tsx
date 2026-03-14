@@ -23,8 +23,9 @@ export function MessageList({ messages, isLoading }: MessageListProps) {
     );
   }
 
+  const isEmpty = messages.length === 0;
   return (
-    <div className="flex flex-col h-full overflow-y-auto px-4 py-6">
+    <div className={cn("flex flex-col h-full px-4 py-6", isEmpty ? "overflow-hidden" : "overflow-y-auto")}>
       <div className="space-y-6 max-w-4xl mx-auto w-full">
         {messages.map((message) => (
           <div
