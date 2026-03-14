@@ -4,24 +4,39 @@
   "targets": {
     "build": {
       "command": "npm run build",
+      "options": {
+        "cwd": "apps/uigen"
+      },
       "inputs": ["default", "^production"],
       "outputs": ["{projectRoot}/.next", "!{projectRoot}/.next/cache"]
     },
     "dev": {
       "command": "npm run dev",
+      "options": {
+        "cwd": "apps/uigen"
+      },
       "cache": false,
       "persistent": true
     },
     "serve": {
       "command": "npm run start",
+      "options": {
+        "cwd": "apps/uigen"
+      },
       "cache": false,
       "persistent": true
     },
     "lint": {
-      "command": "npm run lint"
+      "command": "npm run lint",
+      "options": {
+        "cwd": "apps/uigen"
+      }
     },
     "test": {
-      "command": "npm run test"
+      "command": "npm run test",
+      "options": {
+        "cwd": "apps/uigen"
+      }
     }
   }
 }
