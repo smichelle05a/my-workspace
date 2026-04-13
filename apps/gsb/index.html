@@ -4,33 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Country Selection Page</title>
+    <link rel="stylesheet" href="./styles/output.css">
 </head>
-<body>
+<body class="min-h-screen flex items-center justify-center p-4">
 
-    <div id="app">
-        <h1 style="font-size: 32px; font-weight: 800; font-family: Arial, Helvetica, sans-serif;">Please select your country</h1>
-        <select name="countries" id="countries" style="width: 300px; height: 40px; font-size: 18px; padding: 5px; border-radius: 20px; border: 1px solid gray;">
-            <option value="" disabled selected>Select your country</option>
-            <option value="ARG">Argentina</option>
-            <option value="BRS">Brasil</option>
-            <option value="CHL">Chile</option>
-        </select>
+    <div id="app" class="w-full p-10 flex flex-col items-center transition-all duration-300">
+        <!-- El contenido se hidrata dinámicamente desde index.ts -->
     </div>
     
-    <script type="module">
-        import {getCountries} from './backend/index.js';
-
-        const loadingElement = document.querySelector('#app p')
-
-        let loading = true;
-
-        const countries = await getCountries();
-
-        console.log(countries);
-
-        loading = false;
-
-        loadingElement.setAttribute('hidden')
-    </script>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>

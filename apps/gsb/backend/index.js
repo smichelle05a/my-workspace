@@ -17,8 +17,10 @@ async function getCountries() {
         }, 1500);
     });
 }
-// @ts-ignore
 async function getCountry(id) {
-    return {};
+    const countryToReturn = countries.find((country) => country.code === id);
+    if (!countryToReturn)
+        throw new Error('Country not found');
+    return countryToReturn;
 }
-export { getCountries, };
+export { getCountries, getCountry };
