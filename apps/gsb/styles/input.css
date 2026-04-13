@@ -17,6 +17,7 @@
       transform: translate3d(0, -5px, 0) rotateZ(240deg);
     }
   }
+  --font-gothic: "Century Gothic", "AppleGothic", sans-serif;
 }
 
 .animate-blob {

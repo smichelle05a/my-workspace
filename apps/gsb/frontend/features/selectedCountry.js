@@ -1,6 +1,12 @@
 import { ImageComponent } from '../components/image.js';
+import { APP_CONFIG } from '../config/constants.js';
+/**
+ * Componente para mostrar los detalles del país seleccionado.
+ * @param name Nombre del país
+ * @param code Código del país para la bandera
+ */
 export function SelectedCountry(name, code) {
-    const flagUrl = code ? `./src/imgs/${code}.png` : null;
+    const flagUrl = code ? `${APP_CONFIG.PATHS.FLAGS}${code}.png` : null;
     return `
         <div class="flex flex-col items-center justify-center space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <h3 class="font-sans text-xl text-gray-700 font-medium">Your selected country is...</h3>
@@ -12,8 +18,8 @@ export function SelectedCountry(name, code) {
         aspectRatioClass: 'aspect-video'
     })}
             
-            <!-- Country Name (Century Gothic, 40px) -->
-            <p style="font-family: 'Century Gothic', 'AppleGothic', sans-serif; font-size: 40px;" class="text-gray-900 font-bold tracking-tight">
+            <!-- Nombre del País -->
+            <p class="font-gothic text-[40px] text-gray-900 font-bold tracking-tight">
                 ${name || 'No country selected'}
             </p>
         </div>
