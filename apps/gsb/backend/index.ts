@@ -1,4 +1,9 @@
-const countries : Array<{name: string, code: string}> = [
+type CountryType = {
+    name: string,
+    code: string
+}
+
+const countries : CountryType[] = [
     {"name" : "Argentina", "code" : "ARG"},
     {"name" : "Brasil", "code" : "BRS"},
     {"name" : "Chile", "code" : "CHL"},
@@ -11,7 +16,7 @@ const countries : Array<{name: string, code: string}> = [
     {"name" : "Canadá", "code" : "CAN"},
 ]
 
-async function getCountries(): Promise<object[]> {
+async function getCountries(): Promise<CountryType[]> {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(countries);
@@ -19,11 +24,13 @@ async function getCountries(): Promise<object[]> {
     });
 }
 
-// @ts-ignore
-async function getCountry(id : string): Promise<Country> {
-    return {}
+async function getCountry(id : string): Promise<CountryType> {
+    const countryToReturn = countries.find((country) => country.code === id);
+    if (!countryToReturn) throw new Error('Country not found');
+    return countryToReturn;
 }
 
-export default {
+export {
     getCountries,
+    getCountry
 }

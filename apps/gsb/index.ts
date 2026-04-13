@@ -7,4 +7,5 @@ function CountryOption(label: string, value : string) {
 // @ts-ignore
 function CountrySelect() : HTMLSelectElement
 {
+    
 }

@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Country Selection Page</title>
 </head>
 <body>
 
     <div id="app">
-        <p>Loading...</p>
+        <h1 style="font-size: 32px; font-weight: 800; font-family: Arial, Helvetica, sans-serif;">Please select your country</h1>
+        <select name="countries" id="countries" style="width: 300px; height: 40px; font-size: 18px; padding: 5px; border-radius: 20px; border: 1px solid gray;">
+            <option value="" disabled selected>Select your country</option>
+            <option value="ARG">Argentina</option>
+            <option value="BRS">Brasil</option>
+            <option value="CHL">Chile</option>
+        </select>
     </div>
     
     <script type="module">
-        import {getCountries} from '/backend/index.js';
+        import {getCountries} from './backend/index.js';
 
         const loadingElement = document.querySelector('#app p')
 
         let loading = true;
+
+        const countries = await getCountries();
+
+        console.log(countries);
 
         loading = false;
 
