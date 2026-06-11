@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green-dark: #54833B;
+  --color-green-neon: #04A54B;
+  @keyframes blob {
+    0%, 100% {
+      border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      transform: translate3d(0, 0, 0) rotateZ(0deg);
+    }
+    33% {
+      border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+      transform: translate3d(0, 5px, 0) rotateZ(120deg);
+    }
+    66% {
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+      transform: translate3d(0, -5px, 0) rotateZ(240deg);
+    }
+  }
+  --font-gothic: "Century Gothic", "AppleGothic", sans-serif;
+}
+
+.animate-blob {
+  animation: blob 3s linear infinite;
+}
